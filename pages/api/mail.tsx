@@ -40,7 +40,7 @@ const getClientEmailHtmlContent = (html = true): string => {
           "
         >
           <img
-            src="https://raw.githubusercontent.com/migueleguerra/solar-pro-usa/main/public/solar-pro-logo.png"
+            src="https://raw.githubusercontent.com/Usasolarpro/USASolarPro/main/public/solar-pro-logo.png"
             alt="solar pro logo"
             style="margin-bottom: 80px"
           />
@@ -62,7 +62,7 @@ const getClientEmailHtmlContent = (html = true): string => {
               padding: 10px 20px;
               border-radius: 10px;
             "
-            href="https://solar-pro-usa.vercel.app/"
+            href="https://usasolarpro.com"
             >Go to website</a>
         </div>`
     : `Message Received!\r\n
