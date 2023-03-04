@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("react-phone-number-input/style.css");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+.container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(12rem, 1fr) [center-start] repeat(
+      9,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(12rem, 1fr) [full-end];
+}
+
+.primary-font-color {
+  color: #203456;
+}
+
+.secondary-font-color {
+  color: #f26622;
+}
+
+.dark-gray-font-color {
+  color: #5e6282;
+}
+
+.primary-bg-color {
+  background-color: #203456;
+}
+
+.secondary-bg-color {
+  background-color: #f26622;
+}
+
+.dark-gray-bg-color {
+  background-color: #5e6282;
+}
+
+.gray-blue-bg-color {
+  background-color: #41526f;
+}
+
+.gray-bg-color {
+  background-color: #f9fafb;
+}
+
+.feedback-speech::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  border: 20px solid transparent;
+  border-top-color: white;
+  border-bottom: 0;
+  margin-left: -20px;
+  margin-bottom: -15px;
+}
+
+.custom-img-gradient {
+  background: -webkit-linear-gradient(
+    0deg,
+    #ffffff 20%,
+    #ffffff 30%,
+    rgba(255, 255, 255, 0.95) 40%,
+    rgba(255, 255, 255, 0.87) 50%,
+    rgba(255, 255, 255, 0.68) 60%,
+    rgba(255, 255, 255, 0) 75%
+  );
+}
+
+@media only screen and (max-width: 1240px) {
+  .custom-img-gradient {
+    background: -webkit-linear-gradient(
+      30deg,
+      #ffffff 20%,
+      #ffffff 40%,
+      rgba(255, 255, 255, 0.95) 45%,
+      rgba(255, 255, 255, 0.87) 50%,
+      rgba(255, 255, 255, 0.68) 70%,
+      rgba(255, 255, 255, 0) 80%
+    );
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns:
+      [full-start] minmax(6rem, 1fr) [center-start] repeat(
+        9,
+        [col-start] minmax(min-content, 14rem) [col-end]
+      )
+      [center-end] minmax(6rem, 1fr) [full-end];
+  }
+}
+
+.call-to-action-wave {
+  background-image: url(../public/waves/call-action-wave.svg);
+}
+
+.feedback-wave {
+  background-image: url(../public/waves/feedback-wave.svg);
+}
+
+.what-you-get-wave {
+  background-image: url(../public/waves/what-you-get.svg);
+}
+
+.whats-included-wave {
+  background-image: url(../public/waves/whats-included-wave.svg);
+}
+
+.contact-wave {
+  background-image: url(../public/waves/contact-wave.svg);
+}
+
+.financing-wave {
+  background-image: url(../public/waves/financing-wave.svg);
+}
+
+.aboutus-wave {
+  background-image: url(../public/waves/aboutus-wave.svg);
+}
+
+.dots {
+  background-image: url(../public/dots.svg);
+}
+
+.loading-animation {
+  animation: spin 0.8s infinite ease-in-out;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.video {
+  background-image: url("https://images.unsplash.com/flagged/photo-1566838634698-48b165cb0a9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
