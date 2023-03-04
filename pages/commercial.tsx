@@ -7,7 +7,6 @@ const Commercial = () => {
     <div className="container">
       <Head>
         <title>Solar Pro USA - Commercial</title>
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <section className="col-[full-start/full-end]">
