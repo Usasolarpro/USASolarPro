@@ -8,8 +8,11 @@ const SolarAndStorage = () => {
   return (
     <div className="container">
       <Head>
-        <title>Solar Pro USA - Solar and Storage</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>USA Solar Pro - Solar and Storage</title>
+        <meta
+          name="description"
+          content="Maximize your energy independence and savings with our expert solar and storage system installations. Our team will design and install a custom system that stores excess energy for use when you need it, reducing your reliance on the grid and lowering your energy bills. Trust us to provide a reliable and efficient energy solution for your home or business."
+        />
       </Head>
 
       {/* Hero Services */}

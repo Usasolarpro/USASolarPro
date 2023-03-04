@@ -6,7 +6,7 @@ function aboutus() {
   return (
     <div className="container primary-font-color">
       <Head>
-        <title>Solar Pro USA - About Us</title>
+        <title>USA Solar Pro - About Us</title>
       </Head>
 
       <section className="col-[full-start/full-end] container pt-[15rem] primary-bg-color aboutus-wave bg-no-repeat bg-cover bg-center text-white">

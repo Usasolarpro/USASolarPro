@@ -6,7 +6,11 @@ const Commercial = () => {
   return (
     <div className="container">
       <Head>
-        <title>Solar Pro USA - Commercial</title>
+        <title>USA Solar Pro - Commercial</title>
+        <meta
+          name="description"
+          content="Power your business with clean, renewable energy and reduce your energy costs with our expert commercial solar installations. Our team of professionals will work with you to design and install a custom solar system that meets your unique energy needs and maximizes your savings. Take advantage of tax incentives and rebates while reducing your carbon footprint and demonstrating your commitment to sustainability."
+        />
       </Head>
 
       <section className="col-[full-start/full-end]">

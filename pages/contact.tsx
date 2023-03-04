@@ -5,6 +5,7 @@ import PhoneInput from "react-phone-number-input/react-hook-form";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import FormLoading from "../components/FormLoading";
+import Head from "next/head";
 
 interface FormValues {
   firstName: string;
@@ -92,6 +93,10 @@ const Contact = () => {
 
   return (
     <section className="contact-wave bg-no-repeat bg-cover bg-center">
+      <Head>
+        <title>USA Solar Pro - Contact</title>
+      </Head>
+
       <form
         onSubmit={handleSubmit(onSubmit)}
         className="flex flex-col primary-font-color mx-auto max-w-2xl space-y-4 bg-white sm:shadow-lg mb-[20rem] translate-y-[10rem] sm:p-[4rem] pt-[2rem] px-2"

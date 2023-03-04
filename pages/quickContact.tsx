@@ -2,12 +2,15 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import FormLoading from "../components/FormLoading";
+import ReCAPTCHA from "react-google-recaptcha";
+import Head from "next/head";
 
 interface FormValues {
   firstName: string;
   lastName: string;
   email: string;
   helpMessage: string;
+  recaptcha: boolean;
   form: string;
 }
 
@@ -20,6 +23,10 @@ function quickContact() {
     reset,
     formState: { errors },
   } = useForm<FormValues>();
+
+  const onChange = () => {
+    console.log("use recaptcha");
+  };
 
   const onSubmit = async (formData: FormValues) => {
     setLoading(true);
@@ -46,8 +53,12 @@ function quickContact() {
   };
 
   return (
-    <section className="contact-wave bg-no-repeat bg-cover bg-center primary-font-color h-screen">
-      <div className="translate-y-[10rem] flex flex-col max-w-2xl mx-auto bg-white shadow-md sm:p-[4rem] p-[2rem]">
+    <section className="contact-wave bg-no-repeat bg-cover bg-center primary-font-color">
+      <Head>
+        <title>USA Solar Pro - Quick Contact</title>
+      </Head>
+
+      <div className="translate-y-[10rem] flex flex-col max-w-2xl mx-auto bg-white shadow-md sm:p-[4rem] p-[2rem] mb-[20rem]">
         <h3 className="text-3xl font-bold text-center">Let's work together</h3>
         <p className="text-center pb-[2rem] px-4 sm:px-0">
           We'd love to hear from you!
@@ -123,6 +134,18 @@ function quickContact() {
               {...register("helpMessage")}
               className="border h-[5rem] p-2 rounded-md"
             />
+          </div>
+
+          <div className="flex items-center flex-col">
+            <ReCAPTCHA
+              {...register("recaptcha", { required: true })}
+              sitekey={`${process.env.GOOGLE_RECAPTCHA}`}
+              size="normal"
+              onChange={onChange}
+            />
+            {errors.recaptcha?.type === "required" && (
+              <span className="text-xs text-red-600">click the recaptcha.</span>
+            )}
           </div>
 
           <button className="py-2 secondary-bg-color text-white rounded-md shadow-md transform transition duration-200 hover:scale-110">

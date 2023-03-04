@@ -5,7 +5,7 @@ function privacypolicy() {
   return (
     <div className="container primary-font-color">
       <Head>
-        <title>Solar Pro USA - Financing</title>
+        <title>Solar Pro USA - Privacy and Policy</title>
       </Head>
 
       <section className="col-[full-start/full-end]">

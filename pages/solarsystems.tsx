@@ -8,8 +8,11 @@ const solarSystems = () => {
   return (
     <div className="container">
       <Head>
-        <title>Solar Pro USA - Solar and Storage</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>USA Solar Pro - Premium Solar Systems</title>
+        <meta
+          name="description"
+          content="Experience the ultimate in solar energy technology and performance with our premium solar systems. Our team of experts will design and install a high-quality system that maximizes your energy production and savings. Trust us to provide a reliable and efficient energy solution that enhances your home or business and demonstrates your commitment to sustainability."
+        />
       </Head>
 
       {/* Hero Services */}

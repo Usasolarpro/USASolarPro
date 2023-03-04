@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineCheckCircle } from "react-icons/ai";
@@ -5,6 +6,10 @@ import { AiOutlineCheckCircle } from "react-icons/ai";
 function successform() {
   return (
     <section className="flex flex-col h-screen text-center items-center justify-center p-[2rem] primary-font-color contact-wave bg-no-repeat bg-cover">
+      <Head>
+        <title>USA Solar Pro - Success</title>
+      </Head>
+
       <AiOutlineCheckCircle className="mb-[2rem]" size={100} color="#203456" />
       <div className="md:flex md:space-x-2 items-end">
         <h2 className="text-3xl font-bold">Message Received.</h2>

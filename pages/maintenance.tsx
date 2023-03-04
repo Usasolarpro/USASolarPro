@@ -7,8 +7,11 @@ const Maintenance = () => {
   return (
     <div className="container">
       <Head>
-        <title>Solar Pro USA - Maintenance</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>USA Solar Pro - Maintenance</title>
+        <meta
+          name="description"
+          content="Ensure the optimal performance of your solar system with our comprehensive maintenance services. Our team of experienced technicians will keep your system running smoothly, preventing downtime and maximizing your energy production. From regular cleaning and inspections to repairs and replacements, we have the expertise to keep your solar system operating at peak efficiency."
+        />
       </Head>
 
       <section className="col-[full-start/full-end]">

@@ -8,8 +8,11 @@ const ShinglesAndTiles = () => {
   return (
     <div className="container">
       <Head>
-        <title>Solar Pro USA - Solar and Storage</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>USA Solar Pro - Shingles and Tiles</title>
+        <meta
+          name="description"
+          content="Elevate your home's curb appeal and energy efficiency with our innovative solar shingles and tiles. Our team of experts will install a custom solar roofing solution that seamlessly integrates with your existing roof and generates clean, renewable energy for your home."
+        />
       </Head>
 
       {/* Hero Services */}

@@ -78,7 +78,7 @@ function financing() {
   return (
     <div className="container primary-font-color">
       <Head>
-        <title>Solar Pro USA - Financing</title>
+        <title>USA Solar Pro - Financing</title>
       </Head>
 
       <section className="col-[full-start/full-end]">

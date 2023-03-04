@@ -7,8 +7,11 @@ const Residential = () => {
   return (
     <div className="container">
       <Head>
-        <title>Solar Pro USA - Residencial</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>USA Solar Pro - Residencial</title>
+        <meta
+          name="description"
+          content="Discover the financial benefits of residential solar energy with our expert installation services and flexible financing options. Save money on your energy bills and take advantage of incentives and tax credits while reducing your carbon footprint with clean, renewable energy. Our team of professionals will guide you through the process, from design to installation, to make your transition to solar seamless and hassle-free."
+        />
       </Head>
 
       {/* Hero Services */}

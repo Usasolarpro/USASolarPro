@@ -11,8 +11,34 @@ const Home: NextPage = () => {
   return (
     <div className="container">
       <Head>
-        <title>Solar Pro USA</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>
+          USA Solar Pro | Expert Solar Installations and Financing Options
+        </title>
+        <meta
+          name="description"
+          content="Looking for a solar energy professional company in Atlanta, Georgia that offers financing? Look no further! Our company provides expert solar installation services, along with flexible financing options to make going solar more affordable than ever. Contact us today to learn more!"
+        />
+        <meta
+          property="og:title"
+          content="USA Solar Pro | Expert Solar Installations and Financing Options"
+        />
+        <meta
+          property="og:description"
+          content="Looking for a solar energy professional company in Atlanta, Georgia that offers financing? Look no further! Our company provides expert solar installation services, along with flexible financing options to make going solar more affordable than ever. Contact us today to learn more!"
+        />
+        <meta
+          property="og:image"
+          content="https://raw.githubusercontent.com/Usasolarpro/USASolarPro/main/public/solar-pro-logo.png?token=GHSAT0AAAAAAB7R4U4TP5S35C3QKEHM3SY6ZACZCHQ"
+        />
+        <meta name="og:url" content="https://usasolarpro.com" />
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta
+          name="keywords"
+          content="Solar Energy, Solar System, Green Energy, Sustainable Energy, Solar Financing, Atlanta, Georgia, GA, Solar Shingles, Solar Tiles, Solar Installers, Solar Power
+            Solar Solutions, Solar System Maintenance, Roofing, Solar Storage, USA, Premium Solar"
+        />
+        <meta name="author" content="USA Solar Pro" />
+        <meta name="copyright" content="Copyright USA Solar Pro" />
       </Head>
 
       {/* Hero section */}
