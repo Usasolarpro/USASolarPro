@@ -2,6 +2,8 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import PhoneInput from "react-phone-number-input/react-hook-form";
+import ReCAPTCHA from "react-google-recaptcha";
+
 import FormLoading from "../components/FormLoading";
 
 interface FormValues {
@@ -22,6 +24,7 @@ interface FormValues {
   fileName: string;
   fileType: string;
   hearAboutUs: string;
+  recaptcha: boolean;
   form: string;
 }
 
@@ -35,6 +38,10 @@ const Contact = () => {
     formState: { errors },
   } = useForm<FormValues>();
   const [loading, setLoading] = useState(false);
+
+  const onChange = () => {
+    console.log("use recaptcha");
+  };
 
   const onSubmit = async (formData: FormValues) => {
     setLoading(true);
@@ -327,7 +334,13 @@ const Contact = () => {
                 className="w-4 h-4"
                 type="checkbox"
               />
-              <label className="text-sm">Solar Only</label>
+              <label
+                className={`text-sm ${
+                  errors.proyectType?.type === "required" && "text-red-600"
+                }`}
+              >
+                Solar Only
+              </label>
             </div>
             <div className="flex items-center space-x-2">
               <input
@@ -336,7 +349,13 @@ const Contact = () => {
                 className="w-4 h-4"
                 type="checkbox"
               />
-              <label className="text-sm">Storage and Solar</label>
+              <label
+                className={`text-sm ${
+                  errors.proyectType?.type === "required" && "text-red-600"
+                }`}
+              >
+                Storage and Solar
+              </label>
             </div>
             <div className="flex items-center space-x-2">
               <input
@@ -345,7 +364,13 @@ const Contact = () => {
                 className="w-4 h-4"
                 type="checkbox"
               />
-              <label className="text-sm">Roofing and Solar</label>
+              <label
+                className={`text-sm ${
+                  errors.proyectType?.type === "required" && "text-red-600"
+                }`}
+              >
+                Roofing and Solar
+              </label>
             </div>
             <div className="flex items-center space-x-2">
               <input
@@ -354,7 +379,13 @@ const Contact = () => {
                 className="w-4 h-4"
                 type="checkbox"
               />
-              <label className="text-sm">Roofing</label>
+              <label
+                className={`text-sm ${
+                  errors.proyectType?.type === "required" && "text-red-600"
+                }`}
+              >
+                Roofing
+              </label>
             </div>
             <div className="flex items-center space-x-2">
               <input
@@ -363,7 +394,13 @@ const Contact = () => {
                 className="w-4 h-4"
                 type="checkbox"
               />
-              <label className="text-sm">Storage</label>
+              <label
+                className={`text-sm ${
+                  errors.proyectType?.type === "required" && "text-red-600"
+                }`}
+              >
+                Storage
+              </label>
             </div>
             <div className="flex items-center space-x-2">
               <input
@@ -372,7 +409,13 @@ const Contact = () => {
                 className="w-4 h-4"
                 type="checkbox"
               />
-              <label className="text-sm">Other</label>
+              <label
+                className={`text-sm ${
+                  errors.proyectType?.type === "required" && "text-red-600"
+                }`}
+              >
+                Other
+              </label>
             </div>
             {errors.proyectType?.type === "required" && (
               <span className="text-xs text-red-600">
@@ -430,6 +473,18 @@ const Contact = () => {
             <option value="In-Person Event">In-Person Events</option>
             <option value="Other">other</option>
           </select>
+        </div>
+
+        <div className="flex items-center flex-col">
+          <ReCAPTCHA
+            {...register("recaptcha", { required: true })}
+            sitekey={`${process.env.GOOGLE_RECAPTCHA}`}
+            size="normal"
+            onChange={onChange}
+          />
+          {errors.recaptcha?.type === "required" && (
+            <span className="text-xs text-red-600">click the recaptcha.</span>
+          )}
         </div>
 
         <div className="flex justify-center transform transition duration-200 hover:scale-110 pt-4">
