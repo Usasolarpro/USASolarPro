@@ -1,12 +1,18 @@
+import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isDesktop, setIsDesktop] = useState(true);
 
   useEffect(() => {
-    videoRef?.current?.play();
-  }, []);
+    //check if is loading on desktop or mobile
+    setIsDesktop(typeof screen.orientation !== "undefined");
+    if (isDesktop) {
+      videoRef?.current?.play();
+    }
+  }, [isDesktop]);
 
   return (
     <header className="col-[full-start/full-end] flex justify-start items-center h-screen relative overflow-hidden custom-img-gradient">
@@ -28,15 +34,25 @@ export const Hero = () => {
           </Link>
         </div>
       </div>
-      <video
-        className="video absolute object-cover h-full z-[-1]"
-        muted
-        loop
-        ref={videoRef}
-      >
-        <source src="hero/hero-mp4.mp4" type="video/mp4" />
-        <source src="hero/hero-webm.webm" type="video/webm" />
-      </video>
+      {isDesktop ? (
+        <video
+          className="video absolute object-cover h-full z-[-1]"
+          muted
+          loop
+          ref={videoRef}
+        >
+          <source src="hero/hero-mp4.mp4" type="video/mp4" />
+          <source src="hero/hero-webm.webm" type="video/webm" />
+        </video>
+      ) : (
+        <Image
+          className="object-cover z-[-1]"
+          src="https://images.unsplash.com/flagged/photo-1566838634698-48b165cb0a9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+          alt="Solar Energy House"
+          priority
+          fill
+        />
+      )}
     </header>
   );
 };

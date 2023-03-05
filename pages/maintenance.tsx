@@ -2,6 +2,7 @@ import Head from "next/head";
 import { CallToAction } from "../components/CallToAction";
 import { HeroServices } from "../components/HeroServices";
 import { VideoSection } from "../components/VideoSection";
+import Image from "next/image";
 
 const Maintenance = () => {
   return (
@@ -16,7 +17,7 @@ const Maintenance = () => {
 
       <section className="col-[full-start/full-end]">
         <HeroServices
-          imageUrl="https://images.unsplash.com/photo-1660330590022-9f4ff56b63f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80"
+          imageUrl="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1337&q=80"
           heading="Solar Maintenance"
           headingColor="Services"
           message="These systems can last for decades and provide your home with an abundant source of energy. Over time, however, dust accumulation, bird droppings, squirrels chewing through cables and other things can cause the panels to lose efficiency. We want to ensure our products run at peak performance. If you ever notice a loss in output - or if you just want to confirm that everything is in top working condition - contact us and we'll check it out for you!"
@@ -72,10 +73,12 @@ const Maintenance = () => {
           </div>
         </div>
         <div className="col-start-2 col-span-1 lg:block hidden">
-          <img
+          <Image
             className="h-screen"
             src="https://images.unsplash.com/photo-1542336391-ae2936d8efe4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
             alt="how solar works"
+            width={1200}
+            height={1200}
           />
         </div>
       </section>

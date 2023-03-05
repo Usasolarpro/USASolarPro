@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -41,10 +42,12 @@ function aboutus() {
             </li>
           </ul>
           <div>
-            <img
+            <Image
               className="sm:w-[60rem] rounded-md shadow-md"
               src="https://images.unsplash.com/flagged/photo-1566838634698-48b165cb0a9d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
               alt="about us solar"
+              width={500}
+              height={500}
             />
           </div>
         </div>

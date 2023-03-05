@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface HeroServicesParams {
   heading: string;
   headingColor: string;
@@ -27,20 +29,27 @@ export const HeroServices = ({
             </p>
           </div>
           <div className="col-start-2 col-span-1">
-            <img
+            <Image
               className="w-full h-screen lg:block hidden"
               src={imageUrl}
               alt="residential"
+              quality={100}
+              width={1470}
+              height={800}
             />
           </div>
         </>
       ) : (
         <>
           <div className="col-start-1 col-end-9 lg:col-start-1 lg:col-span-1 lg:h-screen h-[30rem] overflow-hidden">
-            <img
+            <Image
               className="w-screen md:w-full object-cover md:h-screen h-[max(30rem,30vh)]"
               src={imageUrl}
               alt="residential"
+              priority
+              quality={100}
+              width={1500}
+              height={800}
             />
           </div>
           <div className="col-start-1 col-end-9 lg:mr-[20%] lg:col-start-2 lg:col-span-1 flex flex-col justify-center lg:pl-10 p-8 space-y-6 primary-font-color lg:py-0 py-[4rem]">

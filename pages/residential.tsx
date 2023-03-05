@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { CallToAction } from "../components/CallToAction";
 import { HeroServices } from "../components/HeroServices";
+import Image from "next/image";
 
 const Residential = () => {
   return (
@@ -85,10 +86,12 @@ const Residential = () => {
             </h2>
           </div>
           <div className="px-8">
-            <img
+            <Image
               className="rounded-md shadow-xl w-full h-full object-cover"
               src="https://images.unsplash.com/photo-1630608354129-6a7704150401?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80"
               alt="solar panels"
+              width={500}
+              height={500}
             />
           </div>
           <div className="p-8 flex flex-col space-y-[2rem] justify-center items-start">
@@ -130,17 +133,22 @@ const Residential = () => {
             </div>
           </div>
           <div className="px-8 row-start-4 lg:row-start-3">
-            <img
+            <Image
               className="rounded-md shadow-xl w-full h-full object-cover"
               src="https://www.cnet.com/a/img/resize/2044f5631e1ddfd77164c6332f0579c55ccf98ef/hub/2011/10/20/6975a085-fdc5-11e2-8c7c-d4ae52e62bcc/Dow_solar_shingles.jpg?auto=webp&fit=crop&height=675&width=1200"
               alt="solar panels"
+              priority
+              width={500}
+              height={500}
             />
           </div>
           <div className="px-8">
-            <img
+            <Image
               className="rounded-md shadow-xl w-full h-full object-cover"
-              src="https://images.unsplash.com/photo-1660330589827-da8ab7dd3c02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
+              src="https://images.unsplash.com/photo-1668097613572-40b7c11c8727?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
               alt="solar panels"
+              width={500}
+              height={500}
             />
           </div>
           <div className="p-8 flex flex-col space-y-[2rem] justify-center items-start">
@@ -233,10 +241,12 @@ const Residential = () => {
         </div>
 
         <div className="col-start-2 lg:block hidden">
-          <img
+          <Image
             className="h-screen"
-            src="https://images.unsplash.com/photo-1542336391-ae2936d8efe4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
+            src="https://images.unsplash.com/photo-1608806667067-66ebd8b169e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=730&q=80"
             alt="how solar works"
+            width={800}
+            height={800}
           />
         </div>
       </section>

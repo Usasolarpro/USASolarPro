@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface ServiceCardParams {
@@ -15,10 +16,12 @@ export const ServiceCard = ({
 }: ServiceCardParams) => {
   return (
     <div className="grid gap-4 shadow-lg rounded-md overflow-hidden">
-      <img
+      <Image
         className="h-[max(10rem,30vh)] w-full object-cover"
         src={imageUrl}
         alt={imageUrl}
+        width={500}
+        height={500}
       />
       <h3 className="primary-font-color uppercase font-bold">{header}</h3>
       <p className="h-full lg:h-[max(8rem,10vh)] flex items-center px-4 primary-font-color">
