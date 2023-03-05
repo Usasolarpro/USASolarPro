@@ -38,28 +38,44 @@ const Residential = () => {
           everything is just right, we get to work!
         </p>
         <div className="grid md:grid-cols-4 lg:px-[6rem] md:px-0 gap-[4rem] md:gap-4 font-bold">
-          <div className="flex flex-col">
-            <img
+          <div className="flex flex-col items-center space-y-4">
+            <Image
               className="h-[6rem]"
-              src="residential/collect.svg"
+              src="/residential/collect.svg"
               alt="collect"
+              width={100}
+              height={100}
             />
             <p>Collect Utility Bill</p>
           </div>
-          <div className="flex flex-col">
-            <img
+          <div className="flex flex-col items-center space-y-4">
+            <Image
               className="h-[6rem]"
-              src="residential/design.svg"
+              src="/residential/design.svg"
               alt="design"
+              width={100}
+              height={100}
             />
             <p>Custom Design</p>
           </div>
-          <div className="flex flex-col">
-            <img className="h-[6rem]" src="residential/pick.svg" alt="pick" />
+          <div className="flex flex-col items-center space-y-4">
+            <Image
+              className="h-[6rem]"
+              src="/residential/pick.svg"
+              alt="pick"
+              width={100}
+              height={100}
+            />
             <p>Pick the best for you</p>
           </div>
-          <div className="flex flex-col">
-            <img className="h-[6rem]" src="residential/work.svg" alt="work" />
+          <div className="flex flex-col items-center space-y-4">
+            <Image
+              className="h-[6rem]"
+              src="/residential/work.svg"
+              alt="work"
+              width={100}
+              height={100}
+            />
             <p>We get to work</p>
           </div>
         </div>

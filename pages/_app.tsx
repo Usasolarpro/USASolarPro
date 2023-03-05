@@ -12,7 +12,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="viewport" content="width=device-width, user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <Script
           strategy="lazyOnload"
