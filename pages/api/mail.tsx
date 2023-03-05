@@ -226,9 +226,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       : [],
   };
 
-  await mail.send(clientEmailData).then(async () => {
+  await mail.send(ownerEmailData).then(async () => {
     await setTimeout(2000);
-    mail.send(ownerEmailData);
+    mail.send(clientEmailData);
   });
 
   res.status(200).json({ status: "OK" });

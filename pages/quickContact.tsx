@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import FormLoading from "../components/FormLoading";
-import ReCAPTCHA from "react-google-recaptcha";
 import Head from "next/head";
 
 interface FormValues {
@@ -10,7 +9,6 @@ interface FormValues {
   lastName: string;
   email: string;
   helpMessage: string;
-  recaptcha: boolean;
   form: string;
 }
 
@@ -23,10 +21,6 @@ function quickContact() {
     reset,
     formState: { errors },
   } = useForm<FormValues>();
-
-  const onChange = () => {
-    console.log("use recaptcha");
-  };
 
   const onSubmit = async (formData: FormValues) => {
     setLoading(true);
@@ -134,18 +128,6 @@ function quickContact() {
               {...register("helpMessage")}
               className="border h-[5rem] p-2 rounded-md"
             />
-          </div>
-
-          <div className="flex items-center flex-col">
-            <ReCAPTCHA
-              {...register("recaptcha", { required: true })}
-              sitekey={`${process.env.GOOGLE_RECAPTCHA}`}
-              size="normal"
-              onChange={onChange}
-            />
-            {errors.recaptcha?.type === "required" && (
-              <span className="text-xs text-red-600">click the recaptcha.</span>
-            )}
           </div>
 
           <button className="py-2 secondary-bg-color text-white rounded-md shadow-md transform transition duration-200 hover:scale-110">
