@@ -19,7 +19,7 @@ const solarSystems = () => {
 
       <section className="col-[full-start/full-end]">
         <HeroServices
-          imageUrl="https://images.unsplash.com/photo-1613665813446-82a78c468a1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1158&q=80"
+          imageUrl="https://images.unsplash.com/flagged/photo-1566838616631-f2618f74a6a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
           heading="Premium"
           headingColor="Solar Systems"
           message="Solar Pro offers the highest efficiency and affordability traditional solar panels. Our professionalism and experience qualify us to offer the highest warranty in the market which goes up to 25 years on your critical components.

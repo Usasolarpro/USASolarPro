@@ -39,18 +39,24 @@ const SolarAndStorage = () => {
               <span className="secondary-font-color">Enphase Energy</span> (Up
               to 15 year or up to 4,000 cycles)
             </p>
+            <Link
+              className="px-8 py-2 secondary-bg-color text-white rounded-md transform transition duration-200 hover:scale-110"
+              href="files/enphase.pdf"
+              target="_blank"
+            >
+              View Enphase Brochure
+            </Link>
             <p>
               <span className="secondary-font-color">Sonnen</span> (Up to 15
               year or 15,000 cycles warranty)
             </p>
-            <div className="transform transition duration-200 hover:scale-110">
-              <Link
-                className="px-8 py-2 secondary-bg-color text-white rounded-md"
-                href=""
-              >
-                View Brochure
-              </Link>
-            </div>
+            <Link
+              className="px-8 py-2 secondary-bg-color text-white rounded-md transform transition duration-200 hover:scale-110"
+              href="files/sonnen.pdf"
+              target="_blank"
+            >
+              View Sonnen Brochure
+            </Link>
           </div>
           <div className="flex flex-col space-y-4">
             <div>

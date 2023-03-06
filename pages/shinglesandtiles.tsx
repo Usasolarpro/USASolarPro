@@ -3,6 +3,7 @@ import { HeroServices } from "../components/HeroServices";
 import { CallToAction } from "../components/CallToAction";
 import { WarrantyDetails } from "../components/systems/WarrantyDetails";
 import { VideoSection } from "../components/VideoSection";
+import Link from "next/link";
 
 const ShinglesAndTiles = () => {
   return (
@@ -19,9 +20,9 @@ const ShinglesAndTiles = () => {
 
       <section className="col-[full-start/full-end]">
         <HeroServices
-          imageUrl="https://images.unsplash.com/flagged/photo-1566838616631-f2618f74a6a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1587&q=80"
-          heading="Apollo III"
-          headingColor="Solar System"
+          imageUrl="https://images.unsplash.com/photo-1583345237708-add35a664d77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+          heading="Apollo II"
+          headingColor="Shingles & Tiles"
           message="The Apollo II solar roofing system packs sleek yet powerful solar energy production into a low-profile roofing system. Featuring solar shingles that can be installed with a new OR existing asphalt shingle roof, the Apollo II system offers clean energy without the bulky look of racks and panels"
         />
       </section>
@@ -43,15 +44,13 @@ const ShinglesAndTiles = () => {
               roof line and provide a clean aesthetic, but also withstand all
               types of heavy weather with a 100% leakproof warranty.
             </p>
-            <div className="transform transition duration-200 hover:scale-110">
-              <a
-                className="px-8 py-2 secondary-bg-color text-white rounded-md"
-                href="files/Apollo-Tile-II-TDS-73W-e-2208ctr.pdf"
-                target="_blank"
-              >
-                View Brochure
-              </a>
-            </div>
+            <Link
+              className="px-8 py-2 secondary-bg-color text-white rounded-md transform transition duration-200 hover:scale-110"
+              href="files/apollo-II.pdf"
+              target="_blank"
+            >
+              View Apollo II Brochure
+            </Link>
           </div>
           <div className="flex flex-col space-y-4">
             <div>

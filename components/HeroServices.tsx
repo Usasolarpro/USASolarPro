@@ -43,7 +43,7 @@ export const HeroServices = ({
         <>
           <div className="col-start-1 col-end-9 lg:col-start-1 lg:col-span-1 lg:h-screen h-[30rem] overflow-hidden">
             <Image
-              className="w-screen md:w-full object-cover md:h-screen h-[max(30rem,30vh)]"
+              className="w-screen md:w-full object-cover lg:h-screen h-[max(30rem,30vh)]"
               src={imageUrl}
               alt="residential"
               priority
