@@ -25,46 +25,51 @@ mail.setApiKey(process.env.SENDGRID_API_KEY || "");
 const getClientEmailHtmlContent = (html = true): string => {
   return html
     ? `<div
-          style="
-            font-family: Verdana, sans-serif, Helvetica;
-            display: flex;
-            flex-direction: column;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #203456;
-            padding-right: 20px;
-            padding-left: 20px;
-          "
-        >
-          <img
-            src="https://raw.githubusercontent.com/Usasolarpro/USASolarPro/main/public/solar-pro-logo.png"
-            alt="solar pro logo"
-            style="margin-bottom: 80px"
-          />
-          <div>
-            <h1 style="margin: 0; padding-bottom: 5px
-            ; font-size: 25px;">Message Received!</h1>
-            <h2 style="margin: 0; padding-bottom: 10px; color: #f26622; font-size: 20px;">
-              Thanks for choosing us
-            </h2>
-          </div>
-          <p style="padding-bottom: 50px">
-            One of our representatives will be in touch with you shortly.
-          </p>
-          <a
+        style="
+          font-family: Verdana, sans-serif, Helvetica;
+          margin-top: 50px;
+          margin-bottom: 50px;
+          text-align: center;
+          color: #203456;
+          padding-right: 20px;
+          padding-left: 20px;
+        "
+      >
+        <img
+          src="https://raw.githubusercontent.com/Usasolarpro/USASolarPro/main/public/solar-pro-logo.png"
+          alt="solar pro logo"
+          style="margin-bottom: 80px"
+        />
+        <div>
+          <h1 style="margin: 0; padding-bottom: 5px; font-size: 25px">
+            Message Received!
+          </h1>
+          <h2
             style="
-              background-color: #f26622;
-              color: white;
-              text-decoration: none;
-              padding: 10px 20px;
-              border-radius: 10px;
+              margin: 0;
+              padding-bottom: 10px;
+              color: #f26622;
+              font-size: 20px;
             "
-            href="https://usasolarpro.com"
-            >Go to website</a>
-        </div>`
+          >
+            Thanks for choosing us
+          </h2>
+        </div>
+        <p style="padding-bottom: 50px">
+          One of our representatives will be in touch with you shortly.
+        </p>
+        <a
+          style="
+            background-color: #f26622;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 10px;
+          "
+          href="https://usasolarpro.com"
+          >Go to website</a
+        >
+      </div>`
     : `Message Received!\r\n
        Thanks for choosing us.\r\n
        One of our Solar Pro USA representatives will be in touch with you shortly.\r\n`;
