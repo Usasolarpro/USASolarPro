@@ -28,7 +28,7 @@ const Home: NextPage = () => {
         />
         <meta
           property="og:image"
-          content="https://raw.githubusercontent.com/Usasolarpro/USASolarPro/main/public/logo-social.png"
+          content="https://raw.githubusercontent.com/Usasolarpro/USASolarPro/main/public/logo-social.jpg"
         />
         <meta name="og:url" content="https://usasolarpro.com" />
         <meta name="twitter:card" content="summary_large_image"></meta>

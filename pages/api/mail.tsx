@@ -200,36 +200,38 @@ const getOwnerEmailMessageContent = (
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   const body = JSON.parse(req.body);
 
-  const clientEmailData = {
-    to: "miguel_gt88@hotmail.com",
-    from: "no-reply@usasolarpro.com",
-    subject: `New message from Solar Pro USA`,
-    text: getClientEmailHtmlContent(false),
-    html: getClientEmailHtmlContent(),
-  };
+  if (body.email && body.firstname) {
+    const clientEmailData = {
+      to: body.email,
+      from: "no-reply@usasolarpro.com",
+      subject: `New message from Solar Pro USA`,
+      text: getClientEmailHtmlContent(false),
+      html: getClientEmailHtmlContent(),
+    };
 
-  const ownerEmailData = {
-    to: "guetop88@gmail.com",
-    from: "no-reply@usasolarpro.com",
-    subject: `New message from ${body.firstName}`,
-    text: getOwnerEmailMessageContent(body.form, body),
-    html: getOwnerEmailHtmlContent(body.form, body),
-    attachments: body.file
-      ? [
-          {
-            content: body.file,
-            filename: body.fileName,
-            type: body.fileType,
-            disposition: "attachment",
-          },
-        ]
-      : [],
-  };
+    const ownerEmailData = {
+      to: "office@usasolarpro.com",
+      from: "no-reply@usasolarpro.com",
+      subject: `New message from ${body.firstName}`,
+      text: getOwnerEmailMessageContent(body.form, body),
+      html: getOwnerEmailHtmlContent(body.form, body),
+      attachments: body.file
+        ? [
+            {
+              content: body.file,
+              filename: body.fileName,
+              type: body.fileType,
+              disposition: "attachment",
+            },
+          ]
+        : [],
+    };
 
-  await mail.send(ownerEmailData).then(async () => {
-    await setTimeout(2000);
-    mail.send(clientEmailData);
-  });
+    await mail.send(ownerEmailData);
+    await mail.send(clientEmailData);
 
-  res.status(200).json({ status: "OK" });
+    res.status(200).json({ status: "OK" });
+  } else {
+    res.status(500).json({ status: "Error" });
+  }
 };
