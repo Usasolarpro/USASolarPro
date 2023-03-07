@@ -4,15 +4,18 @@ import { useEffect, useRef, useState } from "react";
 
 export const Hero = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [isDesktop, setIsDesktop] = useState(true);
+  const [isMobile, setisMobile] = useState(false);
 
   useEffect(() => {
     //check if is loading on desktop or mobile
-    setIsDesktop(typeof screen.orientation !== "undefined");
-    if (isDesktop) {
+    const details = navigator.userAgent;
+    const regexp =
+      /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i;
+    setisMobile(regexp.test(details));
+    if (!isMobile) {
       videoRef?.current?.play();
     }
-  }, [isDesktop]);
+  }, [isMobile]);
 
   return (
     <header className="col-[full-start/full-end] flex justify-start items-center h-screen relative overflow-hidden custom-img-gradient">
@@ -34,7 +37,7 @@ export const Hero = () => {
           </Link>
         </div>
       </div>
-      {isDesktop ? (
+      {!isMobile ? (
         <video
           className="video absolute object-cover h-full z-[-1]"
           muted
