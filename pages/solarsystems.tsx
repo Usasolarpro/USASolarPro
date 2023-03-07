@@ -87,37 +87,47 @@ const solarSystems = () => {
               What's included
             </p>
             <div className="flex justify-between font-bold sm:text-base text-sm">
-              <p>PREMIUM SOLAR SYSTEMS WARRANTY</p>
+              <p className="sm:max-w-[100%] max-w-[12rem]">
+                PREMIUM SOLAR SYSTEMS WARRANTY
+              </p>
               <p className="md:mr-[2rem]">COVERAGE</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>Solar Module Power Output</p>
+              <p className="sm:max-w-[100%] max-w-[12rem]">
+                Solar Module Power Output
+              </p>
               <p className="md:mr-[3rem]">25 Years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>Microinverters and DC Optimizers</p>
+              <p className="sm:max-w-[100%] max-w-[12rem]">
+                Microinverters and DC Optimizers
+              </p>
               <p className="md:mr-[3rem]">25 years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>Mounting System</p>
+              <p className="sm:max-w-[100%] max-w-[12rem]">Mounting System</p>
               <p className="md:mr-[3rem]">25 Years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>Flashing</p>
+              <p className="sm:max-w-[100%] max-w-[12rem]">Flashing</p>
               <p className="md:mr-[3rem]">25 Years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm">
-              <p>DC Optimized Inverter</p>
+              <p className="sm:max-w-[100%] max-w-[12rem]">
+                DC Optimized Inverter
+              </p>
               <p className="md:mr-[3rem]">12 Years</p>
             </div>
             <hr className="col-[center-start/center-end] row-start-3 gray-bg-color my-[2rem]" />
             <div className="flex justify-between sm:text-base text-sm pb-[2rem]">
-              <p>Master Solar Installer</p>
+              <p className="sm:max-w-[100%] max-w-[12rem]">
+                Master Solar Installer
+              </p>
               <p className="md:mr-[3rem]">25 Years</p>
             </div>
           </div>
