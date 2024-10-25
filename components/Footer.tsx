@@ -18,9 +18,9 @@ export const Footer = () => {
             <span>call us:</span>
             <Link
               className="secondary-font-color hover:text-white"
-              href="tel:4708300272"
+              href="tel:4049878976"
             >
-              470-830-0272
+              404-987-8976
             </Link>
           </div>
           <span className="sm:block hidden">|</span>
