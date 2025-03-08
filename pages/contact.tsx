@@ -321,10 +321,10 @@ const Contact = () => {
         </div>
 
         <div className="flex flex-col sm:flex-row px-8 sm:px-0 gap-4 sm:justify-between">
-          {/* Proyect type */}
+          {/* Project type */}
 
           <div className="space-y-2">
-            <label className="text-sm font-bold">Proyect type*</label>
+            <label className="text-sm font-bold">Project type*</label>
             <div className="flex items-center space-x-2">
               <input
                 {...register("proyectType", { required: true })}

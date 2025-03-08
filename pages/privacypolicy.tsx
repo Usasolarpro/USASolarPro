@@ -544,8 +544,8 @@ function privacypolicy() {
         </p>
 
         <p>Solar Pro, LLC</p>
-        <p>862 Bridgewater St SW</p>
-        <p>Atlanta, GA 30310</p>
+        <p>8246 Aaron St NW</p>
+        <p>Atlanta, GA 30314</p>
         <p className="mb-[1rem]">United States</p>
 
         <h3
